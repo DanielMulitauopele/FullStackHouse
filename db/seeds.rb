@@ -12,7 +12,7 @@ color = {'Hearts': 'Red', 'Diamonds': 'Red', 'Spades': 'Black', 'Clubs': 'Black'
 
 available_suits.each do |suit|
     available_values.each do |value|
-        Card.create(suit: suit, value: value, name: "#{value} of #{suit}", color: color[suit.to_sym])        
+        Card.create(suit: suit, value: value, name: "#{value} of #{suit}", color: color[suit.to_sym], image: "/assets/images/Clubs/9C.png")        
     end
 end
 

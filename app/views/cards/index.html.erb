@@ -1,16 +1,20 @@
 <div class="container">
     <h1>All Cards</h1>
 
-    <% @cards.each_slice(5) do |card_group| %>
+    <% @cards.in_groups_of(6, false).each do |card_group| %>
         <div class="row">
             <% card_group.each do |card| %>
-                <div class="card" style="width: 16rem; margin: 1%;">
-                <%# <%= image_tag(card.image, :size => "100x180", class: "card-img-top") %>
-                <div class="card-body" id="card-<%= card.id %>">
-                    <h5 class="card-name"><%= link_to card.name, card_path(card.id) %></h5>
-                    </br>
+                <div class="col-md-2">
+                    <div class="card mx-auto" style="width: 10rem;">
+                        <%= image_tag('9C.png', :size => "100x180", class: "card-img-top") %>
+                    
+                        <div class="card-body" id="card-<%= card.id %>" >
+                            <h5 class="card-title" style="font: 12px;"><%= card.name %></h5>
+                            <p class="card-text">This is a card.</p>
+                            <a href="#" class="btn btn-primary">Inspect this card!</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
             <% end %>
         </div>
     <% end %>
