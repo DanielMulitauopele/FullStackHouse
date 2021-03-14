@@ -1,9 +1,25 @@
 <h1>All Cards</h1>
 
-<ul id="cards">
-    <% @cards.each do |card| %>
-        <li>
-            <%= card.name %>
-        </li>
+<%# <ul id="cards"> %>
+    <%# <% @cards.each do |card| %> %>
+        <%# <li> %>
+            <%# <%= card.name %> %>
+        <%# </li> %>
+    <%# <% end %> %>
+<%# </ul> %>
+
+<div class="container">
+  <% @cards.each_slice(4) do |card_group| %>
+  <div class="row">
+    <% card_group.each do |card| %>
+    <div class="card" style="width: 16rem; margin: 1%;">
+      <%# <%= image_tag(card.image, :size => "100x180", class: "card-img-top") %>
+      <div class="card-body" id="card-<%= card.id %>">
+        <h5 class="card-title"><%= link_to card.name, card_path(card.id) %></h5>
+        </br>
+      </div>
+    </div>
     <% end %>
-</ul>
+  </div>
+  <% end %>
+</div>
