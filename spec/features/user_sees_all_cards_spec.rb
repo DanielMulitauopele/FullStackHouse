@@ -10,10 +10,10 @@ describe 'user can see all cards' do
 
             visit '/cards'
 
-            expect(page).to have_content(card1.title)
-            expect(page).to have_content(card2.title)
-            expect(page).to have_content(card3.title)
-            expect(page).to have_content(card4.title)
+            expect(page).to have_content(card1.suit)
+            expect(page).to have_content(card2.suit)
+            expect(page).to have_content(card3.suit)
+            expect(page).to have_content(card4.suit)
 
             expect(page).to have_content(card1.value)
             expect(page).to have_content(card2.value)
