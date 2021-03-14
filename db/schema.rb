@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_14_213207) do
+ActiveRecord::Schema.define(version: 2021_03_14_221147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,10 +36,10 @@ ActiveRecord::Schema.define(version: 2021_03_14_213207) do
 
   create_table "decks", force: :cascade do |t|
     t.string "name"
-    t.integer "count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "deck_type"
+    t.integer "cards_count"
   end
 
   add_foreign_key "deck_cards", "cards"
