@@ -9,6 +9,5 @@ describe Deck, type: :model do
 
     describe 'relationships' do
         it {should have_many :deck_cards}
-        it {should have_many :cards}
     end
 end

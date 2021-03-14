@@ -9,6 +9,6 @@ describe Card, type: :model do
     end
 
     describe 'relationships' do
-        it {should belong_to :decks}
+        it {should have_many :deck_cards}
     end
 end
