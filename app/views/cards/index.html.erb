@@ -4,14 +4,14 @@
     <% @cards.in_groups_of(6, false).each do |card_group| %>
         <div class="row">
             <% card_group.each do |card| %>
-                <div class="col-md-2">
-                    <div class="card mx-auto" style="width: 10rem;">
+                <div class="col-md-2 py-2">
+                    <div class="card h-100">
                         <%= image_tag('9C.png', :size => "100x180", class: "card-img-top") %>
                     
-                        <div class="card-body" id="card-<%= card.id %>" >
+                        <div class="card-img-overlay d-flex flex-column" id="card-<%= card.id %>" >
                             <h5 class="card-title" style="font: 12px;"><%= card.name %></h5>
                             <p class="card-text">This is a card.</p>
-                            <a href="#" class="btn btn-primary">Inspect this card!</a>
+                            <a href="#" class="btn btn-primary mt-auto">Inspect this card!</a>
                         </div>
                     </div>
                 </div>
