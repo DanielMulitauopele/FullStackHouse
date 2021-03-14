@@ -1,0 +1,13 @@
+<h1><%= @deck.name %></h1>
+<p><%= @deck.deck_type %></p>
+
+<h3>Cards in this deck</h3>
+
+<ul>
+    <% @deck.cards.each do |card| %>
+        <li>
+            <%= card.name %>
+        </li>
+    <% end %>
+</ul>
+<%= link_to "Back to Deck List", decks_path %>

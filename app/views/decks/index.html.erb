@@ -3,7 +3,7 @@
 <ul id="decks">
     <% @decks.each do |deck| %>
         <li>
-            <%= deck.name %>
+            <%= link_to deck.name, deck_path(deck) %>
         </li>
     <% end %>
 </ul>
