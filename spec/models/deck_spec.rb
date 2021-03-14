@@ -1,0 +1,14 @@
+require 'rails_helper'
+
+describe Deck, type: :model do
+    describe 'validations' do
+        it {should validate_presence_of(:name)}
+        it {should validate_presence_of(:type)}
+        it {should validate_presence_of(:count)}
+    end
+
+    describe 'relationships' do
+        it {should have_many :deck_cards}
+        it {should have_many :cards}
+    end
+end
