@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+available_suits = ['Hearts', 'Diamonds', 'Spades', 'Clubs']
+available_values = ["Ace", "King", "Queen", "Jack", "Ten", "Nine", "Eight", "Seven", "Six", "Five", "Four", "Three", "Two"]
+color = {'Hearts': 'Red', 'Diamonds': 'Red', 'Spades': 'Black', 'Clubs': 'Black'}
+
+available_suits.each do |suit|
+    available_values.each do |value|
+        Card.create(suit: suit, value: value, name: "#{value} of #{suit}", color: color[suit.to_sym], image: "/assets/images/Clubs/9C.png")        
+    end
+end
+
+puts "52 cards Imported"
+
