@@ -2,13 +2,14 @@
 <p><%= @deck.deck_type %></p>
 
 <h3>Cards in this deck</h3>
-<%= link_to "Shuffle this deck", shuffle_deck_path(@deck)%>
+<%= link_to "Shuffle this deck", deck_path(@deck, sort: 'random()') %>
+<%= link_to "Sort this deck", deck_path(@deck, sort: 'suit') %>
+
 <ul>
-    <% @deck.cards.each do |card| %>
+    <% @cards.each do |card| %>
         <li>
             <%= card.name %>
         </li>
     <% end %>
 </ul>
-
 <%= link_to "Back to Deck List", decks_path %>

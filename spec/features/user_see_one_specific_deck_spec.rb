@@ -29,10 +29,12 @@ describe "user sees one specific deck" do
             visit deck_path(@deck1) 
 
             expect(page).to have_content(@deck1.name)
+            expect(@deck1.cards.first.name).to eq('Queen of Hearts')
 
             click_link "Shuffle this deck"
 
             expect(page).to have_content(@deck1.name)
+            expect(@deck1.cards.first.name).not_to eq('Queen of Hearts')
         end
     end
 end
