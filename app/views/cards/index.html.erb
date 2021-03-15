@@ -1,5 +1,6 @@
 <div class="container">
     <h1>All Cards</h1>
+    <%= link_to "Go to Deck Vault", decks_path %>
 
     <% @cards.in_groups_of(6, false).each do |card_group| %>
         <div class="row">
