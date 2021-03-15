@@ -1,4 +1,4 @@
-<div class="center">
+<div class="center font">
     <h1><%= @deck.name %></h1>
     <p>Deck Type: <%= @deck.deck_type %></p>
 
@@ -6,7 +6,7 @@
     <%= link_to "Sort this deck", deck_path(@deck, sort: 'suit') %>
 </div>
 
-<div class="container">
+<div class="container font">
     <h1>Cards in this Deck</h1>
 
     <% @cards.in_groups_of(6, false).each do |card_group| %>
