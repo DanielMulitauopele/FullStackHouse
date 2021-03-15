@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   root 'cards#index'
 
-  resources :cards
+  resources :cards, only: [:index, :show]
+  resources :decks, only: [:index, :show] do 
+    member do
+      get :shuffle
+    end
+  end
 end
