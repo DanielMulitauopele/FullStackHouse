@@ -13,3 +13,10 @@ import "channels"
 
 Rails.start()
 ActiveStorage.start()
+
+// function changeImage(img) {
+//     img = $(img);
+//    var in_url = img.attr('src'),
+//      out_url =  img.attr('9H.png');
+//    img.attr('src', out_url).attr('9H.png', in_url);
+// }
