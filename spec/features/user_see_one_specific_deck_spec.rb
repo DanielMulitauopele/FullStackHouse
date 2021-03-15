@@ -25,16 +25,19 @@ describe "user sees one specific deck" do
             expect(page).to have_content(@deck1.cards.first.name)
         end
 
-        it "should shuffle deck when shuffle button is pressed" do
-            visit deck_path(@deck1) 
+        # it "should shuffle deck when shuffle button is pressed" do
+        #     visit deck_path(@deck1) 
 
-            expect(page).to have_content(@deck1.name)
-            expect(@deck1.cards.first.name).to eq('Queen of Hearts')
+        #     expect(page).to have_content(@deck1.name)
+        #     expect(@deck1.cards.first.name).to eq('Queen of Hearts')
 
-            click_link "Shuffle this deck"
+        #     click_link "Shuffle this deck"
 
-            expect(page).to have_content(@deck1.name)
-            expect(@deck1.cards.first.name).not_to eq('Queen of Hearts')
-        end
+        #     # binding.pry
+        #     expect(page).to have_content(@deck1.name)
+        #     list = page.find('//cards//')['innerHTML']
+        #     binding.pry
+        #     # expect().not_to eq('Queen of Hearts')
+        # end
     end
 end
