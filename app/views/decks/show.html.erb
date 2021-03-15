@@ -2,7 +2,7 @@
 <p><%= @deck.deck_type %></p>
 
 <h3>Cards in this deck</h3>
-
+<%= link_to "Shuffle this deck", shuffle_deck_path(@deck)%>
 <ul>
     <% @deck.cards.each do |card| %>
         <li>
@@ -10,4 +10,5 @@
         </li>
     <% end %>
 </ul>
+
 <%= link_to "Back to Deck List", decks_path %>
