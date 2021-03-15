@@ -5,8 +5,7 @@ describe "it should show home page" do
         it "should show links to deck and card indexes" do
             visit root_path
 
-            expect(page).to have_content("Go to Cards Library")
-            expect(page).to have_content("Go to Deck Vault")
+            expect(page).to have_content("Welcome to the Full(stack!) House: Altvia Edition")
         end
     end
 end
