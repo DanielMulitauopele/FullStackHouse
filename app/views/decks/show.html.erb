@@ -1,15 +1,30 @@
 <h1><%= @deck.name %></h1>
-<p><%= @deck.deck_type %></p>
+<p>Deck Type: <%= @deck.deck_type %></p>
 
-<h3>Cards in this deck</h3>
 <%= link_to "Shuffle this deck", deck_path(@deck, sort: 'random()') %>
 <%= link_to "Sort this deck", deck_path(@deck, sort: 'suit') %>
-
-<ul>
-    <% @cards.each do |card| %>
-        <li>
-            <%= card.name %>
-        </li>
-    <% end %>
-</ul>
 <%= link_to "Back to Deck List", decks_path %>
+
+<div class="container">
+    <h1>Cards in this Deck</h1>
+
+    <% @cards.in_groups_of(6, false).each do |card_group| %>
+        <div class="row">
+            <% card_group.each do |card| %>
+                <div class="col-md-2 py-2">
+                    <div class="card h-100">
+                        <%= image_tag('9C.png', :size => "100x180", class: "card-img-top") %>
+                    
+                        <div class=" d-flex flex-column" id="card-<%= card.id %>" >
+                            <h5 class="card-title" style="font: 12px;"><%= card.name %></h5>
+                            <p class="card-text">This is a card.</p>
+                            <a href="#" class="btn btn-primary mt-auto">Inspect this card!</a>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    <% end %>
+</div>
+
+
