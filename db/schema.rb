@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_16_071405) do
+ActiveRecord::Schema.define(version: 2021_03_16_075235) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2021_03_16_071405) do
     t.string "deck_type"
     t.integer "cards_count"
     t.string "sort"
+    t.string "back_image"
   end
 
   add_foreign_key "deck_cards", "cards"
