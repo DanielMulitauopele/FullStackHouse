@@ -16,7 +16,7 @@
   <body>
   
     <% if params[:controller] == 'home' %>
-      <%= video_tag "/images/headers/Full (stack!) House.mp4", autoplay: :autoplay, muted: :muted, class: "header-vid" %>
+      <%= video_tag "/images/headers/Full (stack!) House.mp4", autoplay: :autoplay, muted: :muted, class: "header-vid", poster: '/images/headers/Full (stack!) House.png'%>
     <% else %>
       <header class="header">
       </header>
