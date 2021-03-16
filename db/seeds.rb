@@ -19,13 +19,41 @@
 #         DeckCard.create(card_id: c.id, deck_id: deck.id)      
 #     end
 # end
+deck_images = [
+    '/deck_backs/black-ghost-back.png',
+    '/deck_backs/blue_back.png',
+    '/deck_backs/gray_back.png',
+    '/deck_backs/green_back.png',
+    '/deck_backs/purple_back.png',
+    '/deck_backs/red_back.png',
+    '/deck_backs/yellow_back.png',
+]
 
-card = Card.new('Hearts', 'Nine')
-
-deck = Deck.new(card)
-deck.create('Standard')
-
-deck.cards.each do |card|
-    puts card.name
+deck_images.each do |deck_image|
+    Deck.create!(name: 'Standard Deck', deck_type: 'Standard', back_image: deck_image)
 end
+
+Deck.all.each do |deck|
+    # GEM FUNCTIONALITY
+    gem_card = GemCard.new('Hearts', 'Nine')
+    gem_deck = GemDeck.new(gem_card)
+    
+    # Create 52 card templates
+    gem_deck.create('Standard')
+
+    gem_deck.cards.each do |card|
+        deck.cards.create!(
+            suit: card.suit, 
+            value: card.value, 
+            name: card.name, 
+            color: card.color, 
+            image: "/assets/images/#{card.suit}/#{card.code}.png", 
+            rank: card.rank, 
+            quote: 'The best way to destroy an enemy is to make him a friend.'
+        )
+    end
+end
+
+puts "7 decks with 52 cards each created"
+
 
