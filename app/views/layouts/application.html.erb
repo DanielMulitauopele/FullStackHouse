@@ -14,7 +14,14 @@
   </head>
 
   <body>
-    <%= video_tag "/videos/Full (Stack!) House.mp4", autoplay: :autoplay, muted: :muted, class: "header-vid"%>
+  
+    <% if params[:controller] == 'home' %>
+      <%= video_tag "/videos/Full (Stack!) House.mp4", autoplay: :autoplay, muted: :muted, class: "header-vid" %>
+    <% else %>
+      <header class="header">
+      </header>
+    <% end %>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" style="background-color: #e3f2fd;">
       <div class="navbar-nav mr-auto">
         <%= link_to 'Home', root_path, class: "nav-link" %>

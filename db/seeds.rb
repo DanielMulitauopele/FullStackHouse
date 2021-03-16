@@ -47,7 +47,7 @@ gem_deck.cards.each do |g_card|
         color: g_card.color, 
         image: "/images/#{g_card.suit.downcase}/#{g_card.code}.png", 
         rank: g_card.rank, 
-        quote: 'The best way to destroy an enemy is to make him a friend.'
+        quote: 'Appear weak when you are strong, and strong when you are weak.'
     )
 end
 
