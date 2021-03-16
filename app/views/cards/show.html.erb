@@ -3,6 +3,10 @@
     <p>Value: <%= @card.value %></p>
     <p>Suit: <%= @card.suit %></p>
     <p>Color: <%= @card.color %></p>
-    <p>"<%= @card.quote %>"</p>
+
     <%= image_tag(@card.image, :size => "240x360") %>
+    <blockquote class="blockquote text-center">
+        <p class="mb-0">"<%= @card.quote %>"</p>
+        <footer class="blockquote-footer">Sun Tzu in <cite title="The Art of War">The Art of War</cite></footer>
+    </blockquote>
 </div>
