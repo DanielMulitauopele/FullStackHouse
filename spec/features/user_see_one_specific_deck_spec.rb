@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "user sees one specific deck" do
     describe "when linking from deck index page" do 
         before(:each) do
-            @deck1 = Deck.create!(name: 'First Deck', deck_type: 'Standard')
+            @deck1 = Deck.create!(name: 'First Deck', deck_type: 'Standard', back_image: "/images/deck_backs/blue_back.png")
 
             @deck1.cards.create!(suit: 'Hearts', value: 'Queen', name: 'Queen of Hearts', color: 'Red')
             @deck1.cards.create!(suit: 'Spades', value: 'Ace', name: 'Ace of Spades', color: 'Black')

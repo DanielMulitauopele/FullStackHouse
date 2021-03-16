@@ -3,8 +3,8 @@ require 'rails_helper'
 describe 'user sees all decks' do
     describe 'when they visit /decks' do
         it 'should display all decks' do 
-            deck1 = Deck.create!(name: 'First Deck', deck_type: 'Standard')
-            deck2 = Deck.create!(name: 'Second Deck', deck_type: 'Standard')
+            deck1 = Deck.create!(name: 'First Deck', deck_type: 'Standard', back_image: "/images/deck_backs/blue_back.png")
+            deck2 = Deck.create!(name: 'Second Deck', deck_type: 'Standard', back_image: "/images/deck_backs/blue_back.png")
 
             deck1.cards.create!(suit: 'Hearts', value: 'Queen', name: 'Queen of Hearts', color: 'Red')
             deck1.cards.create!(suit: 'Spades', value: 'Ace', name: 'Ace of Spades', color: 'Black')
