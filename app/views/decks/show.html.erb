@@ -2,8 +2,12 @@
     <h1><%= @deck.name %></h1>
     <p>Deck Type: <%= @deck.deck_type %></p>
 
-    <%= link_to "Shuffle this deck", deck_path(@deck, sort: 'random()') %>
-    <%= link_to "Sort this deck", deck_path(@deck, sort: 'suit') %>
+    <div class="btn btn-danger mt-auto">
+        <%= link_to "Shuffle this deck", deck_path(@deck, sort: 'random()', class: "btn") %>
+    </div>
+    <div class="btn btn-danger mt-auto">
+        <%= link_to "Sort this deck", deck_path(@deck, sort: 'suit', class: "btn") %>
+    </div>
 </div>
 
 <div class="container font">
