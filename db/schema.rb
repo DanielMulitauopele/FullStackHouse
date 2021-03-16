@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_15_034516) do
+ActiveRecord::Schema.define(version: 2021_03_16_071405) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 2021_03_15_034516) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "image", default: "/assets/images/Clubs/9C.png"
+    t.integer "rank"
+    t.text "quote"
   end
 
   create_table "deck_cards", force: :cascade do |t|
