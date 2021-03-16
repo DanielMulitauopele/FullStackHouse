@@ -21,7 +21,8 @@ Bundler.require(*Rails.groups)
 
 module CardShuffler
   class Application < Rails::Application
-    config.assets.paths << "#{Rails.root}/app/assets/videos"
+    config.assets.paths << "#{Rails.root}/app/assets/images/clubs"
+    config.assets.paths << Rails.root.join("app", "assets", "images", "clubs")
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 

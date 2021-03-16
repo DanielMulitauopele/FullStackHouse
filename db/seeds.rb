@@ -19,38 +19,42 @@
 #         DeckCard.create(card_id: c.id, deck_id: deck.id)      
 #     end
 # end
+# GEM FUNCTIONALITY
+gem_card = GemCard.new('Hearts', 'Nine')
+gem_deck = GemDeck.new(gem_card)
+
+# Create 52 card templates
+gem_deck.create('Standard')
+
 deck_images = [
-    '/deck_backs/black-ghost-back.png',
-    '/deck_backs/blue_back.png',
-    '/deck_backs/gray_back.png',
-    '/deck_backs/green_back.png',
-    '/deck_backs/purple_back.png',
-    '/deck_backs/red_back.png',
-    '/deck_backs/yellow_back.png',
+    'black-ghost-back',
+    'blue_back',
+    'gray_back',
+    'green_back',
+    'purple_back',
+    'red_back',
+    'yellow_back',
 ]
 
 deck_images.each do |deck_image|
-    Deck.create!(name: 'Standard Deck', deck_type: 'Standard', back_image: deck_image)
+    Deck.create!(name: deck_image, deck_type: 'Standard', back_image: "/deck_backs/#{deck_image}.png")
+end
+
+gem_deck.cards.each do |g_card|
+    Card.create!(
+        suit: g_card.suit, 
+        value: g_card.value, 
+        name: g_card.name, 
+        color: g_card.color, 
+        image: "/images/#{g_card.suit.downcase}/#{g_card.code}.png", 
+        rank: g_card.rank, 
+        quote: 'The best way to destroy an enemy is to make him a friend.'
+    )
 end
 
 Deck.all.each do |deck|
-    # GEM FUNCTIONALITY
-    gem_card = GemCard.new('Hearts', 'Nine')
-    gem_deck = GemDeck.new(gem_card)
-    
-    # Create 52 card templates
-    gem_deck.create('Standard')
-
-    gem_deck.cards.each do |card|
-        deck.cards.create!(
-            suit: card.suit, 
-            value: card.value, 
-            name: card.name, 
-            color: card.color, 
-            image: "/assets/images/#{card.suit}/#{card.code}.png", 
-            rank: card.rank, 
-            quote: 'The best way to destroy an enemy is to make him a friend.'
-        )
+    Card.all.each do |card|
+        DeckCard.create(card_id: card.id, deck_id: deck.id)
     end
 end
 
