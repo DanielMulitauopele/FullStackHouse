@@ -3,9 +3,14 @@
     <p>Deck Type: <%= @deck.deck_type %></p>
 
     <div class="buttons">
-        <%= link_to "Shuffle this deck", deck_path(@deck, sort: 'random()', class: "btn") %>
+        <div class="btn btn-outline-primary mt-auto">
+            <%= link_to "Shuffle this deck", deck_path(@deck, sort: 'random()', class: "btn") %>
+        </div>
+        
         <div class="divider"></div>
-        <%= link_to "Sort this deck", deck_path(@deck, sort: 'rank desc', class: "btn") %>
+        <div class="btn btn-outline-primary mt-auto">
+            <%= link_to "Sort this deck", deck_path(@deck, sort: 'rank desc', class: "btn") %>
+        </div>
     </div>
 </div>
 
