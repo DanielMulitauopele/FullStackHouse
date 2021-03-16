@@ -27,7 +27,6 @@ gem_deck = GemDeck.new(gem_card)
 gem_deck.create('Standard')
 
 deck_images = [
-    'black-ghost-back',
     'blue_back',
     'gray_back',
     'green_back',
@@ -37,7 +36,7 @@ deck_images = [
 ]
 
 deck_images.each do |deck_image|
-    Deck.create!(name: deck_image, deck_type: 'Standard', back_image: "/deck_backs/#{deck_image}.png")
+    Deck.create!(name: deck_image, deck_type: 'Standard', back_image: "/images/deck_backs/#{deck_image}.png")
 end
 
 gem_deck.cards.each do |g_card|
@@ -58,6 +57,6 @@ Deck.all.each do |deck|
     end
 end
 
-puts "7 decks with 52 cards each created"
+puts "6 decks with 52 cards each created"
 
 

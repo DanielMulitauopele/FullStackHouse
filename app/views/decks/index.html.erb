@@ -1,7 +1,19 @@
-<div class="center font">
-    <h1>All Decks</h1>
+<div class="container font">
+    <h1>Choose Your Deck</h1>
 
-    <% @decks.each do |deck| %>
-        <h5><%= link_to deck.name, deck_path(deck) %></h5>
+    <% @decks.in_groups_of(6, false).each do |deck_group| %>
+        <div class="row">
+            <% deck_group.each do |deck| %>
+                <div class="col-md-2 py-2">
+                    <div class="card h-100">
+                        <%= image_tag(deck.back_image, :size => "100x180", class: "card-img-top") %>
+                    
+                        <div class="card-img-overlay d-flex flex-column" id="deck-<%= deck.id %>" >
+                            <a href="/decks/<%= deck.id %>" class="btn btn-dark mt-auto"><%= deck.name %></a>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
     <% end %>
 </div>
