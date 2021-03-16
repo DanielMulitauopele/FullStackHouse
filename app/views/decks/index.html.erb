@@ -8,8 +8,8 @@
                     <div class="card h-100">
                         <%= image_tag(deck.back_image, :size => "120x180", class: "card-img-top") %>
                     
-                        <div class="card-img-overlay d-flex flex-column" id="deck-<%= deck.id %>" >
-                            <a href="/decks/<%= deck.id %>" class="btn btn-dark mt-auto"><%= deck.name %></a>
+                        <div class="card-img-overlay d-flex flex-column btn-outer" id="deck-<%= deck.id %>" >
+                            <a href="/decks/<%= deck.id %>" class="btn btn-dark mt-auto btn-size"><%= deck.name %></a>
                         </div>
                     </div>
                 </div>
