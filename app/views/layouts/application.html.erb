@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CardShuffler</title>
+    <title>Full (Stack!) House</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -16,7 +16,7 @@
   <body>
   
     <% if params[:controller] == 'home' %>
-      <%= video_tag "/videos/Full (Stack!) House.mp4", autoplay: :autoplay, muted: :muted, class: "header-vid" %>
+      <%= video_tag "/assets/Full (Stack!) House.mp4", autoplay: :autoplay, muted: :muted, class: "header-vid" %>
     <% else %>
       <header class="header">
       </header>
