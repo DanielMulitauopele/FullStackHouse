@@ -35,6 +35,14 @@ This Ruby on Rails application was created as a submission for the technical cha
 
 ## Prompt
 
+Please design and implement a card shuffler using the language of your choice.
+
+Requirements: 
+
+* Implementation should be done in a code repository that can be pulled down by an Altvia engineer
+* Readme provided on how to run your project
+* Showcase your skill set
+
 ## System Requirements
 
 This application requires several technologies to be installed to your local
