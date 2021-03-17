@@ -86,4 +86,4 @@ To run this application locally, take the following steps:
 
 * [Daniel Mulitauopele](https://github.com/DanielMulitauopele)
 
-<img width="1591" alt="Screen Shot 2021-03-16 at 9 42 07 PM" src="https://user-images.githubusercontent.com/37354322/111411662-92294680-86a0-11eb-8a4e-6de5eb9277cc.png">
+<img width=auto alt="Screen Shot 2021-03-16 at 9 51 10 PM" src="https://user-images.githubusercontent.com/37354322/111412323-d2d58f80-86a1-11eb-8081-3d3ed355d4a9.png">
