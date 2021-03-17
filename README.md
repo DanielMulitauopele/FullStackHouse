@@ -37,31 +37,44 @@ This Ruby on Rails application was created as a submission for the technical cha
 
 ## System Requirements
 
-This application requires ruby to be installed to your local
-machine:
+This application requires several technologies to be installed to your local
+machine. The following are required:
 
-* [Ruby](https://www.ruby-lang.org/en/)
+1. [Ruby on Rails 6.1.3](https://rubyonrails.org/)
+2. [PostgreSQL](https://www.postgresql.org/)
+3. [Ruby 2.6.6](https://www.ruby-lang.org/en/)
 
 ## Setup
 
-To setup this application locally, take the following steps:
+To run this application locally, take the following steps:
 
 * Clone this repository down into a local directory of your choice.
-* Navigate(cd) into altvia_card_shuffler
+* Navigate(cd) into FullStackHouse
 * Run bundle
+* Run bundle update
+* Run rake db:{drop,create,migrate,seed}
+* Run rspec to run the test suite
+* Run rails s to open a local server
 
 ## Dependencies
 
-**Development**
+**Production**
 
-* [MiniTest](https://github.com/seattlerb/minitest)
+* [Bootstrap 5](https://getbootstrap.com/)
+* [Cards on Deck](https://github.com/DanielMulitauopele/CardsOnDeck)
+* [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 
-## Testing
+**Development / Test**
 
-Common testing errors:
-
-* If during setup, there is a Gem:ConflictError, run 'gem update railties'
+* [Rspec](https://rspec.info/)
+* [Capybara](https://github.com/teamcapybara/capybara)
+* [Launchy](https://github.com/copiousfreetime/launchy)
+* [Pry](https://github.com/pry/pry)
+* [Shoulda-Matchers](https://github.com/thoughtbot/shoulda-matchers)
+* [Active Designer](https://github.com/thomschlereth/active_designer)
 
 ## Contributors
 
 * [Daniel Mulitauopele](https://github.com/DanielMulitauopele)
+
+<img width="1591" alt="Screen Shot 2021-03-16 at 9 42 07 PM" src="https://user-images.githubusercontent.com/37354322/111411662-92294680-86a0-11eb-8a4e-6de5eb9277cc.png">
