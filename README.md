@@ -82,6 +82,7 @@ To run this application locally, take the following steps:
 * [Pry](https://github.com/pry/pry)
 * [Shoulda-Matchers](https://github.com/thoughtbot/shoulda-matchers)
 * [Active Designer](https://github.com/thomschlereth/active_designer)
+* [SimpleCov](https://github.com/simplecov-ruby/simplecov)
 
 ## Contributors
 
