@@ -8,7 +8,14 @@
 
 ## Relevant Links
 * [My theme song for this technical challenge: take a listen!](https://www.youtube.com/watch?v=9wrmm-PL36o)
+* [Full (Stack!) House Production Link](https://immense-reaches-91193.herokuapp.com/)
 * [Trello Board](https://trello.com/b/r1uKJ90v/altvia-technical-challenge)
+* [Card Shuffler Script](https://github.com/DanielMulitauopele/altvia_card_shuffler)
+* [Cards On Deck Gem](https://rubygems.org/gems/cards_on_deck)
+* [Cards On Deck Repository](https://github.com/DanielMulitauopele/CardsOnDeck)
+
+## Demo 
+
 
 
 ## Table of Contents
@@ -24,7 +31,7 @@
 
 ## Description/Purpose
 
-Technical challenge for Altvia Ruby Software Developer position
+This Ruby on Rails application was created as a submission for the technical challenge for Altvia's Ruby Software Developer position. 
 
 ## Prompt
 
