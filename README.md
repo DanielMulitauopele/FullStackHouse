@@ -62,6 +62,7 @@ To run this application locally, take the following steps:
 * Run bundle update
 * Run rake db:{drop,create,migrate,seed}
 * Run rspec to run the test suite
+* To verify test coverage, in the command line, run open coverage/index.html
 * Run rails s to open a local server
 * Navigate to localhost:3000 in your browser
 
