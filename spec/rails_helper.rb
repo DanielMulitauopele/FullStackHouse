@@ -69,3 +69,6 @@ RSpec.configure do |config|
     end
   end
 end
+
+require 'simplecov'
+SimpleCov.start
