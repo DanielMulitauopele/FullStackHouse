@@ -1,6 +1,6 @@
 # Full (Stack!) House
 
-<img src="https://img.shields.io/badge/ruby-v2.6.6-red" title="ruby-badge"><img src="https://img.shields.io/badge/rails-6.1.3-yellow" title="ruby-badge">
+<img src="https://img.shields.io/badge/ruby-v2.6.6-red" title="ruby-badge"> <img src="https://img.shields.io/badge/rails-6.1.3-yellow" title="ruby-badge">
 
 ## Relevant Links
 * [My theme song for this technical challenge: take a listen!](https://www.youtube.com/watch?v=9wrmm-PL36o)
