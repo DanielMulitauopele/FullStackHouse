@@ -31,7 +31,7 @@
 
 ## Description/Purpose
 
-This Ruby on Rails application was created as a submission for the technical challenge for Altvia's Ruby Software Developer position. 
+This Ruby on Rails application was created as a submission for the technical challenge for Altvia's Ruby Software Developer position. My initial approach was to create a small object-oriented Ruby program, with Card and Deck classes. I developed this small program first (can be found here), but I realized it was not terribly satisfying to see a deck of cards return as 'shuffled' from the command line. As a result, I decided to build something a little more visual, and by refactoring the code I had already written into a custom gem (found here), I was able to import that Card and Deck logic into a brand new Rails 6 application. This is the end result. While there are many areas that can be improved, I believe that my choice to pivot and use a supporting gem to built out this app was a good one. I hope you all agree!
 
 ## Prompt
 
