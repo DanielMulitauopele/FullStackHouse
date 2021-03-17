@@ -55,6 +55,7 @@ To run this application locally, take the following steps:
 * Run rake db:{drop,create,migrate,seed}
 * Run rspec to run the test suite
 * Run rails s to open a local server
+* Navigate to localhost:3000 in your browser
 
 ## Dependencies
 
