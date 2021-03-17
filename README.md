@@ -4,7 +4,7 @@
 
 [Live Link](https://immense-reaches-91193.herokuapp.com/)
 
-<img src="https://user-images.githubusercontent.com/37354322/111405823-c7c93200-8696-11eb-8a79-8dc3f7b00827.mp4" title="header" width="auto">
+![Full (stack!) House](https://user-images.githubusercontent.com/37354322/111405914-ecbda500-8696-11eb-900d-456d8baec2f0.png)
 
 ## Relevant Links
 * [My theme song for this technical challenge: take a listen!](https://www.youtube.com/watch?v=9wrmm-PL36o)
